@@ -1,0 +1,40 @@
+body {
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+.carlogo {
+ margin: 15px 0;
+}
+.support {
+   position: relative;
+   /* border: 1px solid red; */
+}
+#supporticon {
+    position: absolute;
+    top: 27px;
+    left: 50px;
+}
+#supportort {
+    position: absolute;
+    margin-left: 40px;
+    left: 44px;
+    top: 20px;
+    font-size: 12px;
+    color: black;
+}
+#supportnumber {
+    position: absolute;
+    top: 36px;
+    left: 84px;
+    font-size: 15px;
+}
+.top1 {
+   margin-top: 120px;   
+}
+#top1content {
+    height: 80px;
+    text-align: center;
+}
+#top1contenttext {
+    font-size: 35px;
+    letter-spacing: 5px;
+}
