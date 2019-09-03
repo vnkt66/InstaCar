@@ -63,10 +63,10 @@ class Book extends React.Component {
   }
 
   componentDidMount() {
-    var r = localStorage.getItem('roundtrip');
-    console.log(localStorage.getItem('roundtrip'));
-    var p = localStorage.getItem('packdata');
-    var m = localStorage.getItem('multitrip');
+    // var r = localStorage.getItem('roundtrip');
+    // console.log(localStorage.getItem('roundtrip'));
+    // var p = localStorage.getItem('packdata');
+    // var m = localStorage.getItem('multitrip');
     var custdata = JSON.parse(localStorage.getItem('custdata'));
 
     if(custdata === null) {
@@ -83,12 +83,12 @@ class Book extends React.Component {
       })
     }
 
-    if( r === null && p === null && m === null) {
-      console.log(r);
-      console.log(p);
-      console.log(m);
-      this.props.history.push('/aq-index');
-    }
+    // if( r === null && p === null && m === null) {
+    //   console.log(r);
+    //   console.log(p);
+    //   console.log(m);
+    //   this.props.history.push('/aq-index');
+    // }
 
     var token = localStorage.getItem('token');
     var config = {
