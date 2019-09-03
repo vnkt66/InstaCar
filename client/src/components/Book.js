@@ -62,16 +62,16 @@ class Book extends React.Component {
     })
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     var r = localStorage.getItem('roundtrip');
     console.log(localStorage.getItem('roundtrip'));
     var p = localStorage.getItem('packdata');
     var m = localStorage.getItem('multitrip');
     var custdata = JSON.parse(localStorage.getItem('custdata'));
 
-    // if(custdata === null) {
-    //   this.props.history.push('/aq-index/login');
-    // }
+    if(custdata === null) {
+      this.props.history.push('/aq-index/login');
+    }
 
     if(custdata !== null) {
       // custdata = JSON.parse(localStorage.getItem('custdata'));
@@ -96,7 +96,7 @@ class Book extends React.Component {
        key: "value"
     }
 
-    await axios.post('/aq-index/checkout', 
+   axios.post('/aq-index/checkout', 
      bodyParameters,
      config
     ).then((res) => {
