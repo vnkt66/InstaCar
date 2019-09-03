@@ -24,7 +24,7 @@ mongoose.set('useCreateIndex', true);
 
 var url = "mongodb+srv://venkatitsme6:LaasyaSrihan@instacar-jpz0g.mongodb.net/test?retryWrites=true&w=majority" || "mongodb://localhost/aq-index"
 
-mongoose.connect('mongodb://localhost/aq-index', { useNewUrlParser: true });
+mongoose.connect(url, { useNewUrlParser: true });
 const connection = mongoose.connection;
 
 connection.once('open', () => {
