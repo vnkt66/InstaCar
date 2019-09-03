@@ -100,7 +100,7 @@ router.post('/login', (req, res) => {
             res.send({error: 'Incorrect email / password.'});
         } else {
             // console.log(req.body);
-            jwt.sign({user: req.body.email}, 'secretkey', { expiresIn: '300s' }, (err, token) => {
+            jwt.sign({user: req.body.email}, 'secretkey', { expiresIn: '800s' }, (err, token) => {
                 console.log(token);
                 res.json({token});
             })

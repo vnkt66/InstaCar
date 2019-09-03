@@ -69,9 +69,9 @@ class Book extends React.Component {
     var m = localStorage.getItem('multitrip');
     var custdata = JSON.parse(localStorage.getItem('custdata'));
 
-    if(custdata === null) {
-      this.props.history.push('/aq-index/login');
-    }
+    // if(custdata === null) {
+    //   this.props.history.push('/aq-index/login');
+    // }
 
     if(custdata !== null) {
       // custdata = JSON.parse(localStorage.getItem('custdata'));
