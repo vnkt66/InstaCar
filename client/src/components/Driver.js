@@ -234,6 +234,7 @@ export default class Driver extends Component {
                           <Button 
                            style={{marginTop: '60px', marginLeft: '50px'}}
                            onClick={this.onSubmit}
+                           disabled={this.state.name && this.state.language && this.state.car  ? false : true}
                            >Book</Button>
                         </Grid.Column>
                     </Grid>
