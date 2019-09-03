@@ -95,14 +95,15 @@ router.post('/register', (req, res) => {
 });
 
 router.post('/login', (req, res) => {
+    console.log(req);
     User.findOne({ email: req.body.email }, (err, founddata) => {
         if(err || !founddata || !bcrypt.compareSync(req.body.password, founddata.password)) {
             res.send({error: 'Incorrect email / password.'});
         } else {
             // console.log(req.body);
-            jwt.sign({user: req.body.email}, 'secretkey', { expiresIn: '800s' }, (err, token) => {
+            jwt.sign({user: req.body.email}, 'secretkey', { expiresIn: '300s' }, (err, token) => {
                 console.log(token);
-                res.json({token});
+                res.send({token: token});
             })
         }
     });
@@ -535,10 +536,7 @@ router.post('/checkout', verifyToken, (req, res) => {
         if(err) {
         res.send({msg: 'token expired'});
         } else {
-          res.json({
-            message: 'Post created...',
-            authData
-          });
+          res.send({msg: 'Post created...'});
         }
       });
 })

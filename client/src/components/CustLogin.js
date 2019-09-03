@@ -8,15 +8,15 @@ class CustomerLogin extends Component {
     customeremail: ''
   }
 
-  componentDidMount() {
-    var token = localStorage.getItem('token');
+  // componentDidMount() {
+  //   var token = localStorage.getItem('token');
     // this.setState({
     //   customermail: usermail
     // })
-    if(token !== null) {
-      this.props.history.push('/aq-index/book');
-  }
-  }
+  //   if(token !== null) {
+  //     this.props.history.push('/aq-index/book');
+  // }
+  // }
 
   
 onChangepassword = (event) => {
@@ -43,8 +43,9 @@ var data = {
     
   })
   .then((res) => {
+    console.log(res);
     localStorage.setItem('token', res.data.token);
-    this.props.history.push('/aq-index');
+    this.props.history.push('/aq-index/book');
   });
 }
 

@@ -84,6 +84,9 @@ class Book extends React.Component {
     }
 
     if( r === null && p === null && m === null) {
+      console.log(r);
+      console.log(p);
+      console.log(m);
       this.props.history.push('/aq-index');
     }
 
@@ -127,7 +130,7 @@ class Book extends React.Component {
         }
       }
     })
-    console.log(this.custdata);
+    // console.log(this.custdata);
     console.log(token);
   }
 
