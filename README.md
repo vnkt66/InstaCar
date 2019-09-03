@@ -26,7 +26,7 @@ To run it locally -
 2. Make sure you have `npm` Node.js & MongoDB installed in your system.
 3. [Only once] Run (from the root) `npm install` and `cd client && npm install`.
 4. Open two terminal windows (one for running Server and other for the UI).
-5. Start MongoDB service with `sudo service mongod start`. 
+5. Start MongoDB service with `mongod`. 
 6. Run `npm server` to start the server. By default it will run on `port 4000`.
 This time go to `http://localhost:4000` to see the application running.
 
