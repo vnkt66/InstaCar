@@ -106,9 +106,9 @@ class Book extends React.Component {
       console.log(res.data.msg);
       if(res.data.msg === 'token expired') {
         localStorage.removeItem('token');
-        localStorage.removeItem('roundtrip');
-        localStorage.removeItem('multitrip');
-        localStorage.removeItem('packdata');
+        // localStorage.removeItem('roundtrip');
+        // localStorage.removeItem('multitrip');
+        // localStorage.removeItem('packdata');
         this.props.history.push('/aq-index/login');
       } else {
          var roundtrip = JSON.parse(localStorage.getItem('roundtrip'));
