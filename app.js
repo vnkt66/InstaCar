@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
-const stripe = require("stripe")("sk_test_9pElYDL7wnqzqJubpGonlJb800CKezVVjX");
+const stripe = require("stripe")("stripe_public_key");
 const uuid = require("uuid/v4");
 
 const jwt = require('jsonwebtoken');
@@ -11,7 +11,7 @@ var bcrypt     = require('bcryptjs');
 var helmet     = require("helmet");
 
 var distance = require('google-distance');
-distance.apiKey = 'AIzaSyCIlGEQxRW_W4t8cKWiZxjMzwTXdiUm19U';
+distance.apiKey = 'googlekey';
 
 const path = require('path');
 var router  = express.Router();
@@ -22,7 +22,7 @@ const bodyParser = require('body-parser');
 // var session = require('express-session'); 
 mongoose.set('useCreateIndex', true);
 
-var url = "mongodb+srv://venkatitsme6:LaasyaSrihan@instacar-jpz0g.mongodb.net/test?retryWrites=true&w=majority" || "mongodb://localhost/aq-index"
+var url = "mongodb+srv://<username>:<password>@instacar-jpz0g.mongodb.net/test?retryWrites=true&w=majority" || "mongodb://localhost/aq-index"
 
 mongoose.connect(url, { useNewUrlParser: true });
 const connection = mongoose.connection;
