@@ -6,6 +6,7 @@
 #### Back-End: Express, Mongodb, Nodejs
 #### Authentication: Jwt, Helmet, bcrypt
 #### Payments: Stripe
+#### Testing: Jest,enzyme
 
 To run it locally -
 
