@@ -7,15 +7,16 @@ class CustomerLogin extends Component {
     customerpassword: '',
     customeremail: ''
   }
-//   componentDidMount() {
-//     var usermail = localStorage.getItem('username');
-//     this.setState({
-//       customermail: usermail
-//     })
-//     if(usermail !== null) {
-//       this.props.history.push('/aq-index');
-//   }
-//   }
+
+  componentDidMount() {
+    var token = localStorage.getItem('token');
+    // this.setState({
+    //   customermail: usermail
+    // })
+    if(token !== null) {
+      this.props.history.push('/aq-index/book');
+  }
+  }
 
   
 onChangepassword = (event) => {
@@ -43,7 +44,7 @@ var data = {
   })
   .then((res) => {
     localStorage.setItem('token', res.data.token);
-    this.props.history.push('/aq-index/book');
+    this.props.history.push('/aq-index');
   });
 }
 

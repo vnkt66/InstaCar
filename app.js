@@ -24,7 +24,7 @@ mongoose.set('useCreateIndex', true);
 
 var url = "mongodb+srv://venkatitsme6:LaasyaSrihan@instacar-jpz0g.mongodb.net/test?retryWrites=true&w=majority" || "mongodb://localhost/aq-index"
 
-mongoose.connect(url, { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost/aq-index', { useNewUrlParser: true });
 const connection = mongoose.connection;
 
 connection.once('open', () => {
@@ -100,7 +100,7 @@ router.post('/login', (req, res) => {
             res.send({error: 'Incorrect email / password.'});
         } else {
             // console.log(req.body);
-            jwt.sign({user: req.body.email}, 'secretkey', { expiresIn: '30s' }, (err, token) => {
+            jwt.sign({user: req.body.email}, 'secretkey', { expiresIn: '300s' }, (err, token) => {
                 console.log(token);
                 res.json({token});
             })
