@@ -33,7 +33,7 @@ This time go to `http://localhost:4000` to see the application running.
 
 ### Issues:-
 1. Distance between two places are fixed as 347km which is distance betweeen bangalore to chennai, code required to get distances
-dynamically from goole using google api keys is also implemented which you need google api keys.
+dynamically from google using google api keys is also implemented which you need google api keys.
 2.In Airport Package transaction will be unsuccesful since airport package price is fixed at 1500Rs which stripe will treat it as 
 low payment and return an error.
 
